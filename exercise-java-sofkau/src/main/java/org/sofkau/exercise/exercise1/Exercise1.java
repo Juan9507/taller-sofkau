@@ -38,7 +38,7 @@ public class Exercise1 {
     /**
      * Validar si el numero es mayor o igual
      */
-    public void valueBiggerSame() {
+    public void valueBiggerEqual() {
         if (value1 > value2) {
             message.showNumBigger(value1);
         } else if (this.value2 > this.value1) {

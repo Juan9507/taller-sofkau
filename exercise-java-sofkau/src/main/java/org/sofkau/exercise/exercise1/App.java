@@ -19,6 +19,6 @@ public class App {
     public static void init(){
         Exercise1 exercise1 = new Exercise1();
         message.showGetInfo();
-        exercise1.valueBiggerSame();
+        exercise1.valueBiggerEqual();
     }
 }
