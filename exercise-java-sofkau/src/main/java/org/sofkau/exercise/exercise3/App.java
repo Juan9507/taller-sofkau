@@ -13,7 +13,7 @@ public class App {
 
     public static void init() {
         message.showGetInfo();
-        message.showGetNumber();
+        message.showGetNumberText();
         Exercise3 exercise3 = new Exercise3(scanner.getDouble());
         Double area = exercise3.calculateArea();
         message.showAnswer(area);

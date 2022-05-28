@@ -2,6 +2,7 @@ package org.sofkau.exercise.exercise3;
 
 
 import org.jboss.logging.Logger;
+import org.sofkau.exercise.interfaces.MessagesInterface;
 
 /**
  * [Clase para los mensajes del ejercicio 3]
@@ -10,7 +11,7 @@ import org.jboss.logging.Logger;
  * @version [v1.0.0]
  * @since [v1.0.0]
  */
-public class MessagesExercise3 {
+public class MessagesExercise3 implements MessagesInterface {
     /**
      * Objeto de la Logger
      */
@@ -26,7 +27,7 @@ public class MessagesExercise3 {
     }
 
     /**
-     * Mensaje para digitar el numero
+     * Mensaje del programa
      */
     public void showGetInfo() {
         logger.info("Calcular el area de un circulo: ");
@@ -35,7 +36,7 @@ public class MessagesExercise3 {
     /**
      * Mensaje para digitar el numero
      */
-    public void showGetNumber() {
+    public void showGetNumberText() {
         logger.info("Digite el radio para calcular el area:");
     }
 

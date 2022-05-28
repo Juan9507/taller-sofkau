@@ -22,9 +22,9 @@ public class App {
     }
     public static void init() {
         message.showGetInfo();
-        message.showGetNumber();
+        message.showGetNumberText();
         Integer value1 = scanner.getInteger();
-        message.showGetNumber();
+        message.showGetNumberText();
         Integer value2 = scanner.getInteger();
         Exercise2 exercise2 = new Exercise2(value1, value2);
         exercise2.valueBiggerSameEqual();

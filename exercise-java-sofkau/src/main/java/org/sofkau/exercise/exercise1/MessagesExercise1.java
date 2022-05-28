@@ -1,6 +1,7 @@
 package org.sofkau.exercise.exercise1;
 
 import org.jboss.logging.Logger;
+import org.sofkau.exercise.interfaces.MessagesInterface;
 
 /**
  * [ Clase para la creación de los mensajes
@@ -10,7 +11,7 @@ import org.jboss.logging.Logger;
  * @version [v1.0.0]
  * @since [v1.0.0]
  */
-public class MessagesExercise1 {
+public class MessagesExercise1 implements MessagesInterface {
 
     private static final Logger logger = Logger.getLogger(MessagesExercise1.class);
 
@@ -22,12 +23,12 @@ public class MessagesExercise1 {
     /**
      * Mensaje para digitar el numero
      */
-    public void showGetNumber() {
+    public void showGetNumberText() {
         logger.info("Digite un número:");
     }
 
     /**
-     * Mensaje para digitar el numero
+     * Mensaje del programa
      */
     public void showGetInfo() {
         logger.info("Comparar dos numeros y saber cual es mayor o igual: ");
