@@ -18,7 +18,7 @@ public class MessagesExercise7 implements MessagesInterface {
      *
      * @return retorna la inicializacion
      */
-    public static MessagesExercise7 getInstance(){
+    public static MessagesExercise7 getInstance() {
         return new MessagesExercise7();
     }
 
@@ -45,7 +45,7 @@ public class MessagesExercise7 implements MessagesInterface {
     /**
      * Mensaje para mostrar el numero
      */
-    public void showValue(Integer i){
+    public void showValue(Integer i) {
         logger.info(i);
     }
 }

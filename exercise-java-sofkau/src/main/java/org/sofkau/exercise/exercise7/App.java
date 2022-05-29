@@ -29,13 +29,13 @@ public class App {
     /**
      * Metodo para iniciar el programa
      */
-    public static void init(){
+    public static void init() {
         message.showGetInfo();
         int i;
         do {
             message.showGetNumberText();
             i = scanner.getInteger();
-        }while (i < 0);
+        } while (i < 0);
         message.showValue(i);
     }
 }
