@@ -13,6 +13,9 @@ import org.sofkau.exercise.interfaces.MessagesInterface;
  */
 public class MessagesExercise10 implements MessagesInterface {
 
+    /**
+     * Objeto de Logger
+     */
     private static final Logger logger = Logger.getLogger(MessagesExercise10.class);
 
     /**
