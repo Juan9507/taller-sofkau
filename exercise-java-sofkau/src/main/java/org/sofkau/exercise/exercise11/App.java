@@ -1,4 +1,4 @@
-package org.sofkau.exercise.exercise9.exercise11;
+package org.sofkau.exercise.exercise11;
 
 import org.sofkau.exercise.MyScanner;
 
