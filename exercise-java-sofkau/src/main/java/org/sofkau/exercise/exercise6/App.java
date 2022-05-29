@@ -13,7 +13,7 @@ import org.sofkau.exercise.exercise5.MessagesExercise5;
 public class App {
 
     /**
-     * Reutilazmo la creacion del onjeto de
+     * Reutilazmos la creacion del objeto de
      * los mensajes del ejercicio 5 ya que
      * son iguales
      */

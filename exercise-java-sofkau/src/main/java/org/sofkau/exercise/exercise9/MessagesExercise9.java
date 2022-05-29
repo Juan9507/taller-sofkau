@@ -13,8 +13,16 @@ import org.sofkau.exercise.interfaces.MessagesInterface;
  */
 public class MessagesExercise9 implements MessagesInterface {
 
+    /**
+     * Creacion el objeto logger
+     */
     private static final Logger logger = Logger.getLogger(MessagesExercise9.class);
 
+    /**
+     * Metodo para instanciar la clase
+     *
+     * @return Retorna la instancia
+     */
     public static MessagesExercise9 getInstance() {
         return new MessagesExercise9();
     }
@@ -36,9 +44,10 @@ public class MessagesExercise9 implements MessagesInterface {
 
     /**
      * Mostrar la frase terminada
+     *
      * @param text recibe la frase
      */
-    public void showGeSentence(String text){
+    public void showGeSentence(String text) {
         logger.info(text);
     }
 }
