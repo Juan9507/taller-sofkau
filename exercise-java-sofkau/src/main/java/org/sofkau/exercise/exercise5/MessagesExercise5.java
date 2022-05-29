@@ -3,10 +3,18 @@ package org.sofkau.exercise.exercise5;
 import org.jboss.logging.Logger;
 import org.sofkau.exercise.interfaces.MessagesInterface;
 
+/**
+ * [Mensajes para el ejercicio 5
+ * ]
+ *
+ * @author [Juan David Rivera Naranjo - juandavidnaranjo75@gmail.com]
+ * @version [v1.0.0]
+ * @since [v1.0.0]
+ */
 public class MessagesExercise5 implements MessagesInterface {
 
     /**
-     * Metodo para inicializar la lcase
+     * Metodo para inicializar la clase
      *
      * @return retorna la inicializacion
      */
