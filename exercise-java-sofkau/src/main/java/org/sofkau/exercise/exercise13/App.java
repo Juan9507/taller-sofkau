@@ -5,6 +5,13 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * [Clase para ejecutar el programa]
+ *
+ * @author [Juan David Rivera Naranjo - juandavidnaranjo75@gmail.com]
+ * @version [v1.0.0]
+ * @since [v1.0.0]
+ */
 public class App {
 
     static MessagesExercise13 message = MessagesExercise13.getInstance();
