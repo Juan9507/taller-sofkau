@@ -3,6 +3,14 @@ package org.sofkau.exercise.exercise11;
 import org.jboss.logging.Logger;
 import org.sofkau.exercise.interfaces.MessagesInterface;
 
+/**
+ * [Mensajes para el ejercicio 10
+ * ]
+ *
+ * @author [Juan David Rivera Naranjo - juandavidnaranjo75@gmail.com]
+ * @version [v1.0.0]
+ * @since [v1.0.0]
+ */
 public class MessagesExercise11 implements MessagesInterface {
 
     /**
