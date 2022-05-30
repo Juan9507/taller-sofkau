@@ -60,10 +60,4 @@ public class MessagesExercise15 implements MessagesInterface {
         logger.info("OPCION INCORRECTO");
     }
 
-    /**
-     * Mensaje que salio del sistema
-     */
-    public void showExit() {
-        logger.info("Se salio del sistema");
-    }
 }

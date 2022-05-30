@@ -31,6 +31,15 @@ public abstract class MyScannerAbstract {
     }
 
     /**
+     * Metodo para capturar datos de tipo char
+     *
+     * @return retorna el capturador
+     */
+    public char getChar() {
+        return scanneer.nextLine().charAt(0);
+    }
+
+    /**
      * Metodo abstracto para crearle el cuerpo desde
      * la subclase que hereda
      */
