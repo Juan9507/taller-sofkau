@@ -3,6 +3,14 @@ package org.sofkau.exercise.exercise12;
 import org.jboss.logging.Logger;
 import org.sofkau.exercise.interfaces.MessagesInterface;
 
+/**
+ * [Mensajes para el ejercicio 12
+ * ]
+ *
+ * @author [Juan David Rivera Naranjo - juandavidnaranjo75@gmail.com]
+ * @version [v1.0.0]
+ * @since [v1.0.0]
+ */
 public class MessagesExercise12 implements MessagesInterface {
 
     /**
@@ -42,20 +50,18 @@ public class MessagesExercise12 implements MessagesInterface {
     }
 
     /**
-     * Mensaje para mostrar los caracteres de la frases sin diferencia
+     * Mensaje para mostrar los caracteres de la diferencia de las frases
      */
-    public void showSentenceSin(String a, String b) {
-        logger.info(a + " " + b);
+    public void showSentenceTextDifference(String a, String b) {
+        logger.info( a + " - " + b + " Caracteres diferentes de las frases");
     }
 
     /**
-     * Mensaje para mostrar los caracteres de la frases sin diferencia
+     * Mensaje de diferencia de tamaños
+     *
+     * @param text recibe el String de diferencia estre las dos frases
      */
-    public void showSentenceCon(String a, String b) {
-        logger.info(a + " " + b + " Diferentes");
-    }
-
-    public void showSentenceSize(String sentence, String text) {
-        logger.info(text + " Diferencia de longitud de la frase");
+    public void showSentenceSize(String text) {
+        logger.info(text + " - Diferencia por diferentes tamaños de la frase");
     }
 }

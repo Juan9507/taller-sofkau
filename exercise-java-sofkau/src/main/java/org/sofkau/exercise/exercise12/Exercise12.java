@@ -18,6 +18,9 @@ public class Exercise12 {
     private final String sentenceOne;
     private final String sentenceTwo;
 
+    /**
+     * Atributos parael tamaño de las frases
+     */
     private final int sentenceOneSize;
 
     private final int sentenceTwoSize;
@@ -27,6 +30,12 @@ public class Exercise12 {
      */
     private static final MessagesExercise12 message = MessagesExercise12.getInstance();
 
+    /**
+     * Constructor de la clase
+     *
+     * @param one recibe la primera frase
+     * @param two recibe la segunda frase
+     */
     public Exercise12(String one, String two) {
         this.sentenceOne = one;
         this.sentenceTwo = two;
@@ -34,6 +43,9 @@ public class Exercise12 {
         this.sentenceTwoSize = this.sentenceTwo.length();
     }
 
+    /**
+     * Metodo para saber si las frases son iguales
+     */
     public void sentenceEqual() {
         if (this.sentenceOne.equals(this.sentenceTwo)) {
             message.showEqual();
@@ -44,6 +56,8 @@ public class Exercise12 {
 
     /**
      * Metodo para buscar las diferencia si no son iguales
+     * se recorre la primera la frase si tiene el tamaño mas pequeño
+     * para validar las direncia
      */
     public void differencesOne() {
         if (this.sentenceOneSize < this.sentenceTwoSize) {
@@ -51,10 +65,9 @@ public class Exercise12 {
             for (i = 0; i < this.sentenceOneSize; i++) {
                 char currentLetterOne = this.sentenceOne.charAt(i);
                 char currentLetterTwo = this.sentenceTwo.charAt(i);
-                if (String.valueOf(currentLetterOne).equals(String.valueOf(currentLetterTwo))) {
-                    message.showSentenceSin(String.valueOf(currentLetterOne), String.valueOf(currentLetterTwo));
-                } else {
-                    message.showSentenceCon(String.valueOf(currentLetterOne), String.valueOf(currentLetterTwo));
+                if (!String.valueOf(currentLetterOne).equals(String.valueOf(currentLetterTwo))) {
+                    message.showSentenceTextDifference(String.valueOf(currentLetterOne),
+                            String.valueOf(currentLetterTwo));
                 }
             }
             differencesSize();
@@ -63,27 +76,35 @@ public class Exercise12 {
         }
     }
 
+    /**
+     * Metodo para recorrer yvalidar la diferencia si la segunda frase
+     * tiene el tamaño mas pequeño
+     */
     public void differencesTwo() {
         int i;
         for (i = 0; i < this.sentenceTwoSize; i++) {
             char currentLetterOne = this.sentenceOne.charAt(i);
             char currentLetterTwo = this.sentenceTwo.charAt(i);
-            if (String.valueOf(currentLetterOne).equals(String.valueOf(currentLetterTwo))) {
-                message.showSentenceSin(String.valueOf(currentLetterOne), String.valueOf(currentLetterTwo));
-            } else {
-                message.showSentenceCon(String.valueOf(currentLetterOne), String.valueOf(currentLetterTwo));
+            if (!String.valueOf(currentLetterOne).equals(String.valueOf(currentLetterTwo))) {
+                message.showSentenceTextDifference(String.valueOf(currentLetterOne),
+                        String.valueOf(currentLetterTwo));
             }
         }
         differencesSize();
     }
 
+    /**
+     * Metodo para validar lo que no se puede recorrer ya
+     * que hay una frase con mayor tamaño
+     * se utiliza el metodo substring p
+     */
     public void differencesSize() {
         if (this.sentenceOneSize > this.sentenceTwoSize) {
             String text = this.sentenceOne.substring(this.sentenceTwoSize);
-            message.showSentenceSize(this.sentenceOne, text);
+            message.showSentenceSize(text);
         } else if (this.sentenceTwoSize > this.sentenceOneSize) {
             String text = this.sentenceTwo.substring(this.sentenceOneSize);
-            message.showSentenceSize(this.sentenceTwo, text);
+            message.showSentenceSize(text);
         }
     }
 

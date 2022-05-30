@@ -1,4 +1,4 @@
-package org.sofkau.exercise.exercise11;
+package org.sofkau.exercise.exercise9.exercise11;
 
 import org.jboss.logging.Logger;
 import org.sofkau.exercise.interfaces.MessagesInterface;
