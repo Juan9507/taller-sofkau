@@ -42,17 +42,10 @@ public class MessagesExercise16 implements MessagesInterface {
     }
 
     /**
-     * Mensaje para digitar un valor
+     * Mensaje para digitar el nombre
      */
     public void showGetNombre() {
         logger.info("digite el nombre");
-    }
-
-    /**
-     * Mensaje para digitar la edad
-     */
-    public void showGetAge() {
-        logger.info("digite su edad");
     }
 
     /**
@@ -85,7 +78,7 @@ public class MessagesExercise16 implements MessagesInterface {
 
     /**
      * Mensaje para sabe en que objeto estamos
-     * @param valor
+     * @param valor recibe el valor dependiendo la posicion del objeto
      */
     public void showTextPersona(int valor){
         logger.info("Objeto de la persona numero " + valor);

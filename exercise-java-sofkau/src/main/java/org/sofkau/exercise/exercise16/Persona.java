@@ -10,11 +10,16 @@ package org.sofkau.exercise.exercise16;
 public class Persona {
 
     /**
+     * Constantes
+     */
+    private static final char CONSTANTSEXO = 'H';
+
+    /**
      * Atributos para utilizar en la clase persona
      */
     private String nombre;
     private int edad;
-    private String DNI;
+    private String dni;
     private char sexo;
     private int peso;
     private double altura;
@@ -25,7 +30,7 @@ public class Persona {
     public Persona() {
         this.nombre = "";
         this.edad = 0;
-        this.sexo = 'H';
+        this.sexo = CONSTANTSEXO;
         this.peso = 0;
         this.altura = 0;
         generaDNI();
@@ -71,13 +76,13 @@ public class Persona {
      */
     public Integer calcularIMC() {
 
-        final Integer respuesta;
+        final int respuesta;
 
         double formulaImc = Math.round(this.peso / (Math.pow(this.altura, 2)));
 
         if (formulaImc < 20) {
             respuesta = -1;
-        } else if (formulaImc >= 20 && formulaImc <= 25) {
+        } else if (formulaImc <= 25) {
             respuesta = 0;
         } else {
             respuesta = 1;
@@ -91,11 +96,7 @@ public class Persona {
      * @return - retorna true o false
      */
     public Boolean esMayorDeEdad() {
-        if (this.edad >= 18) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.edad >= 18;
     }
 
     /**
@@ -103,8 +104,7 @@ public class Persona {
      */
     private void comprobarSexo() {
         if (this.sexo != 'H' && this.sexo != 'M') {
-            final char SEXO = 'H';
-            this.sexo = SEXO;
+            this.sexo = CONSTANTSEXO;
         }
     }
 
@@ -113,8 +113,8 @@ public class Persona {
      */
     private void generaDNI() {
         int numDNI = ((int) Math.floor(Math.random() * 90000000 + 10000000));
-        int resto = (int) Math.floorMod(numDNI, 23);
-        this.DNI = String.valueOf(numDNI) + generarLetraDNI(resto);
+        int resto = Math.floorMod(numDNI, 23);
+        this.dni = String.valueOf(numDNI) + generarLetraDNI(resto);
     }
 
     /**
@@ -124,7 +124,7 @@ public class Persona {
      * @return - retorna la letra
      */
     private char generarLetraDNI(int resto) {
-        char letras[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y',
+        char[] letras = {'T', 'R', 'W', 'A', 'G', 'M', 'Y',
                 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z',
                 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
         return letras[resto];
@@ -143,14 +143,15 @@ public class Persona {
                 + "Nombre " + this.nombre + "\n"
                 + "Edad " + this.edad + "\n"
                 + "Sexo " + this.sexo + "\n"
-                + "DNI " + this.DNI + "\n"
+                + "DNI " + this.dni + "\n"
                 + "peso " + this.peso + "\n"
                 + "Altura " + this.altura + "\n";
     }
 
     /**
      * Setters de todos el atributo name
-     * @param nombre
+     *
+     * @param nombre - recibe como parametro el nombre
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -158,7 +159,8 @@ public class Persona {
 
     /**
      * Setter para el atributo edad
-     * @param edad
+     *
+     * @param edad - recibe como parametro la edad
      */
     public void setEdad(int edad) {
         this.edad = edad;
@@ -166,7 +168,8 @@ public class Persona {
 
     /**
      * Setter para el atributo sexo
-     * @param sexo
+     *
+     * @param sexo - recibe como parametro el sexo
      */
     public void setSexo(char sexo) {
         this.sexo = sexo;
@@ -174,7 +177,8 @@ public class Persona {
 
     /**
      * Setter para el atributo peso
-     * @param peso
+     *
+     * @param peso - recibe como parametro el peso
      */
     public void setPeso(int peso) {
         this.peso = peso;
@@ -182,7 +186,8 @@ public class Persona {
 
     /**
      * Setter para el atributo altura
-     * @param altura
+     *
+     * @param altura recibe como parametro la altura
      */
     public void setAltura(double altura) {
         this.altura = altura;
