@@ -58,6 +58,10 @@ public class App {
         message.showAll(persona3.toString());
     }
 
+    /**
+     * Metodo para el saber el IMC
+     * @param valor
+     */
     public static void pesoIdeal(int valor) {
         if (valor == -1) {
             message.showBajoPeso();

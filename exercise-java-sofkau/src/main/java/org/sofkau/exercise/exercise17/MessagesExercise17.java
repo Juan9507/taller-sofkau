@@ -32,7 +32,7 @@ public class MessagesExercise17 implements MessagesInterface {
      * Mostrar mensaje del programa
      */
     public void showGetInfo() {
-        logger.info("Programa para saber los precios dfinales de los electrodomesticos");
+        logger.info("Programa para saber los precios finales de los electrodomesticos");
     }
 
     /**

@@ -11,7 +11,7 @@ public class Lavadora extends Electrodomestico {
     /**
      * Atributos
      */
-    private final Integer carga;
+    public Integer carga;
 
     /**
      * Constante

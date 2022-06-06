@@ -1,5 +1,7 @@
 package org.sofkau.exercise.exercise18;
 
+import java.util.Objects;
+
 /**
  * [Clase Serie ]
  *
@@ -38,7 +40,7 @@ public class Serie implements Deliverable {
     public Serie(String title, String creator) {
         this();                 // Atributos por defectos del constructor por defecto
         this.title = title;     // Almacena el titulo enviado por parametro
-        this.creator = creator; // Almacena el creador enviaod por parametro
+        this.creator = creator; // Almacena el creador enviado por parametro
     }
 
     /**
@@ -58,7 +60,7 @@ public class Serie implements Deliverable {
     }
 
     /**
-     * mostrar El titulo
+     * Getter mostrar El titulo
      *
      * @return - El titulo
      */
@@ -173,7 +175,7 @@ public class Serie implements Deliverable {
      * Devuelve [-1] Si el numero de temporada de la serie 1 es menor al de la serie 2
      *
      * @param a - recibe el objeto a comparar
-     * @return
+     * @return - el valor dependiendo el caso
      */
     public int compareTo(Object a) {
         /*Casting de objetos para poder usar el metodo get
@@ -182,7 +184,7 @@ public class Serie implements Deliverable {
         Serie ref = (Serie) a;
         if (this.numberSeasons > ref.getNumberSeasons()) {
             return 1;
-        } else if (this.numberSeasons == ref.getNumberSeasons()) {
+        } else if (Objects.equals(this.numberSeasons, ref.getNumberSeasons())) {
             return 0;
         }
         return -1;

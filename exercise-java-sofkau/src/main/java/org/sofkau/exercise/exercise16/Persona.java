@@ -1,7 +1,7 @@
 package org.sofkau.exercise.exercise16;
 
 /**
- * [Clase persona ]
+ * [Clase persona -> Calcular el IMC peso ideal]
  *
  * @author [Juan David Rivera Naranjo - juandavidnaranjo75@gmail.com]
  * @version [v1.0.0]

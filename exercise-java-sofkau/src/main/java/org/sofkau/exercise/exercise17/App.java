@@ -10,6 +10,7 @@ public class App {
 
     public static void init(){
         Electrodomestico[] listaElectrodomestico = new Electrodomestico[10];
+        listaElectrodomestico[0] = new Television();
         listaElectrodomestico[1] = new Lavadora();
         listaElectrodomestico[2] = new Television();
         listaElectrodomestico[3] = new Electrodomestico();
@@ -26,6 +27,10 @@ public class App {
         contarObjetos(listaElectrodomestico);
     }
 
+    /**
+     * Metodo para contar los objetos
+     * @param listaElectrodomestico - se le pasa el array del objeto electrodomestico
+     */
     public static void contarObjetos(Electrodomestico[] listaElectrodomestico){
 
         Double contadorLavadora = 0.0;
